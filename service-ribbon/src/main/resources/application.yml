@@ -7,3 +7,14 @@ server:
 spring:
   application:
     name: service-ribbon
+  zipkin:
+    base-url: http://47.114.177.174:9411/
+    sender:
+      type: kafka
+    kafka:
+      topic: zipkin
+  sleuth:
+    sampler:
+      probability: 1.0
+  kafka:
+    bootstrap-servers: 47.114.177.174:9092
